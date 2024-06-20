@@ -1,0 +1,34 @@
+<%layout("layout/boilerplate2.ejs")%>
+    <link rel="stylesheet" href="/styles/userbin.css">
+    <div class="container mt-5">
+        <h1 class="h1">Garbage Mangament App</h1>
+        <!-- <h3 class="h3 text-muted mb-4">View all bins</h3> -->
+        <div class="container d-flex justify-content-center">
+            <div class="user_complaint">
+                <div class="view-box mb-3">
+                    <form action="/register_complaint/<%=bin._id%>" method="POST">
+                        <div class="form-group">
+                            <label for="bin_id" class="text-dark col-form-label">Bin id*</label>
+                            <input class="form-control" type="text" name="id" id="bin_id" value="<%=bin.id%>">
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="bin_area" class="text-dark col-form-label">Area*</label>
+                            <input class="form-control" type="text" name="area" id="bin_area" value="<%=bin.area%>">
+                        </div> -->
+                        <div class="form-group">
+                            <label for="bin_area" class="text-dark col-form-label">driver email*</label>
+                            <input class="form-control" type="text" name="area" id="bin_area" value="<%=bin.email%>">
+                        </div>
+                        <div class="form-group">
+                            <label for="complaint" class="text-dark col-form-label">Complaint</label>
+                            <textarea name="complain" id="complaint" cols="30" rows="10"
+                                class="form-control"></textarea>
+                        </div>
+                        <div class="cbtn">
+                            <button class="btn btn-success text-center">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

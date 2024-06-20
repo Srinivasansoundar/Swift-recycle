@@ -1,0 +1,51 @@
+<%layout("layout/boilerplate.ejs")%>
+<link rel="stylesheet" href="styles/viewbin.css">
+    <div class="container mt-5">
+        <h1 class="h1">Garbage Mangament App</h1>
+        <h3 class="h3 text-muted mb-4">View all driver</h3>
+        <div class="container">
+            <div class="row">
+                <% for (let driver of alldriver){%>
+                    <div class="view-box col-4 me-4 mb-3">
+                        <div class="form-group row px-2">
+                            <p class="col-6 text-info">Name:</p>
+                            <p class="col-6 text-info">
+                                <%=driver.name%>
+                            </p>
+                        </div>
+                        <div class="form-group row px-2">
+                            <p class="col-6 text-info">Email:</p>
+                            <p class="col-6 text-info">
+                                <%=driver.email%>
+                            </p>
+                        </div>
+                        <div class="form-group row px-2">
+                            <p class="col-6 text-info">Password:</p>
+                            <p class="col-6 text-info">
+                                <%=driver.password%>
+                            </p class="col-6 text-info">
+                        </div>
+                        <div class="form-group row px-2">
+                            <p class="col-6 text-info">Address:</p>
+                            <p class="col-6 text-info">
+                                <%=driver.address%>
+                            </p>
+                        </div>
+                        <div class="form-group  row px-2">
+                            <p class="col-6 text-info">City:</p>
+                            <p class="col-6 text-info">
+                                <%=driver.city%>
+                            </p>
+                        </div>
+                        <div class="but_box d-flex justify-content-center  w-100 text-center">
+                           
+                            <form action="/delete_driver/<%=driver._id%>?_method=DELETE" method="POST">
+                                <button class="btn btn-danger me-2">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <%}%>
+            </div>
+        </div>
+    </div>

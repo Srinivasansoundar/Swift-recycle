@@ -1,0 +1,53 @@
+<%layout("layout/boilerplate.ejs")%>
+    <link rel="stylesheet" href="styles/viewbin.css">
+    <div class="container mt-5">
+        <h1 class="h1">Garbage Mangament App</h1>
+        <h3 class="h3 text-muted mb-4">View all bins</h3>
+        <div class="container">
+            <div class="row">
+                <% for (let bin of allbin){%>
+                    <div class="view-box col-5 me-4 mb-3">
+                        <div class="form-group row px-2">
+                            <p class="col-6 text-info">Area:</p>
+                            <p class="col-6 text-info">
+                                <%=bin.area%>
+                            </p>
+                        </div>
+                        <div class="form-group row px-2">
+                            <p class="col-6 text-info">Landmark:</p>
+                            <p class="col-6 text-info">
+                                <%=bin.landmark%>
+                            </p>
+                        </div>
+                        <div class="form-group row px-2">
+                            <p class="col-6 text-info">City:</p>
+                            <p class="col-6 text-info">
+                                <%=bin.city%>
+                            </p class="col-6 text-info">
+                        </div>
+                        <div class="form-group row px-2">
+                            <p class="col-6 text-info">Driver email:</p>
+                            <p class="col-6 text-info">
+                                <%=bin.email%>
+                            </p>
+                        </div>
+                        <div class="form-group  px-2">
+                            <p class="col-6 text-info">Best route:</p>
+                            <p class="col-12 text-info">
+                                <%=bin.route%>
+                            </p>
+                        </div>
+                        <div class="but_box d-flex justify-content-center  w-100 text-center">
+                            <form action="/view_bin/update_bin/<%=bin._id%>">
+                                <button class="btn btn-success me-2">Update</button>
+                            </form>
+                            <form action="/delete_bin/<%=bin._id%>?_method=DELETE" method="POST">
+                                <button class="btn btn-danger me-2">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <%}%>
+            </div>
+        </div>
+    </div>

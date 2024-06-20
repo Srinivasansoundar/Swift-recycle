@@ -1,0 +1,55 @@
+<%layout("layout/boilerplate.ejs")%>
+<link rel="stylesheet" href="styles/createbin.css">
+    <div class="container mt-5">
+        <h1 class="h1 mb-4">Garbage Management App</h1>
+        <h1 class="display-5 text-center bg-primary">Create Driver</h1>
+        <div class="create-box">
+        <form action="/create_driver" method="POST">
+            <div class="form-group row mb-3">
+              <label for="name" class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text"  class="form-control" name="driver[name]" id="name">
+              </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" name="driver[email]" id="email">
+                </div>
+              </div>
+              <div class="form-group row mb-3">
+                <label for="password" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" name="driver[password]" id="password">
+                </div>
+              </div>
+              <div class="form-group row mb-3">
+                <label for="address" class="col-sm-2 col-form-label">Address</label>
+                <div class="col-sm-10">
+                  <input type="address" class="form-control" name="driver[address]" id="address">
+                </div>
+              </div>
+              <div class="form-group row mb-3">
+                <label for="city" class="col-sm-2 col-form-label">City</label>
+                <div class="col-sm-10">
+                  <input type="city" class="form-control" name="driver[city]" id="city">
+                </div>
+              </div>
+              <!-- <div class="form-group row mb-3">
+                <label for="aadhar" class="col-sm-2 col-form-label">Aadhar no</label>
+                <div class="col-sm-10">
+                  <input type="aadhar" class="form-control" name="driver[]" id="address">
+                </div>
+              </div> -->
+              <!-- <div class="form-group row mb-3">
+                <label for="city" class="col-sm-2 col-form-label">City</label>
+                <div class="col-sm-10">
+                  <textarea name="driver[route]" id="route" cols="30" rows="10"  class="form-control"></textarea>
+                </div>
+              </div> -->
+              <div class="c-but w-100 text-center">
+              <button class="btn btn btn-success custom_btn_style">Submit</button>
+            </div>
+          </form>
+    </div>
+    </div>

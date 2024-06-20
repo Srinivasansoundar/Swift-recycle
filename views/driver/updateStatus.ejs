@@ -1,0 +1,25 @@
+<%layout("layout/boilerplate3.ejs")%>
+<link rel="stylesheet" href="/styles/updatestatus.css">
+<!-- note this href  -->
+    <div class="container mt-5">
+        <h1 class="h1 mb-4">Garbage Mangament App</h1>
+        <h1 class="display-5 bg-primary text-center mb-5">Update Status</h1>
+        <div class="container d-flex justify-content-center justify-content-center">
+            <form action="/driver_works/update_status/<%=com._id%>?_method=PUT" method="POST" class="box">
+                <div class="form-group row">
+                    <label for="Status" class="col-form-label col-6 fs-5">Status:</label>
+                    <div class="col-6 d-flex align-items-center">
+                        <select name="Status" id="Status" class="sel fs-5">
+                            <option value="Pending" <%=com.Status==="Pending"?'selected':''%>>Pending</option>
+                            <option value="Onprogress" <%=com.Status==="Onprogress"?'selected':''%>>Onprogress</option>
+                            <option value="Completed" <%=com.Status==="Completed"?'selected':''%>>Completed</option>
+                        </select>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-success">Update Status</button>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </div>

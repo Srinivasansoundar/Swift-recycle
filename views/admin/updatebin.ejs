@@ -1,0 +1,50 @@
+<%layout("layout/boilerplate")%>
+<%layout("layout/boilerplate")%>
+<link rel="stylesheet" href="styles/createbin.css">
+    <div class="container mt-5">
+        <h1 class="h1 mb-4">Garbage Management App</h1>
+        <h1 class="display-5 text-center bg-primary">Update Bin Details</h1>
+        <div class="create-box">
+        <form action="/view_bin/update_bin/<%=bin._id%>?_method=PUT" method="POST">
+            <div class="form-group row mb-3">
+              <label for="area" class="col-sm-2 col-form-label">Area</label>
+              <div class="col-sm-10">
+                <input type="text"  class="form-control" name="bin[area]" value=<%=bin.area%> id="area">
+              </div>
+            </div>
+            <!-- <div class="form-group row mb-3">
+              <label for="locality" class="col-sm-2 col-form-label">Locality</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="locality">
+              </div>
+            </div> -->
+            <div class="form-group row mb-3">
+                <label for="landmark" class="col-sm-2 col-form-label">Landmark</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="bin[landmark]" value=<%=bin.landmark%> id="landmark">
+                </div>
+              </div>
+              <div class="form-group row mb-3">
+                <label for="city" class="col-sm-2 col-form-label">City</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="bin[city]" value=<%=bin.city%> id="city">
+                </div>
+              </div>
+              <div class="form-group row mb-3">
+                <label for="email" class="col-sm-2 col-form-label">Assign driver email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" name="bin[email]" value=<%=bin.email%> id="email">
+                </div>
+              </div>
+              <div class="form-group row mb-3">
+                <label for="route" class="col-sm-2 col-form-label">Best Route</label>
+                <div class="col-sm-10">
+                  <textarea name="bin[route]" id="route" cols="30" rows="10" class="form-control"><%=bin.route%></textarea>
+                </div>
+              </div>
+              <div class="c-but w-100 text-center">
+              <button class="btn btn btn-success custom_btn_style">Submit</button>
+            </div>
+          </form>
+    </div>
+    </div>
