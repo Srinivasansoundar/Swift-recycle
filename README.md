@@ -1,4 +1,4 @@
-![login user](https://github.com/user-attachments/assets/21459786-8adf-4e50-86f0-ecbf6644703c)**homepage**
+**homepage**
 
 there will be three user for this application
 
