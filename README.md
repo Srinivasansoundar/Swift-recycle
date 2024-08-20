@@ -66,6 +66,9 @@ he can view the driver
 ![viewdriver](https://github.com/user-attachments/assets/267c0343-9766-4936-a6fe-64941461e113)
 
 
+Driver can update the status
+
+![Screenshot 2024-08-20 071316](https://github.com/user-attachments/assets/0127a0a0-3b8d-4bf7-afd9-88d98a9cd4a0)
 
 
 
